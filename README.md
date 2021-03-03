@@ -31,11 +31,13 @@ resolve conflicts in *each* PR, not just for the entire stack.)
 **How do I start a new feature?**  Just checkout master on a new
 branch, and start working on a fresh branch.
 
+**How do I merge a stack of PRs?**  Run `ghstack land PR_URL`. This
+treats PR_URL is the source of truth (does not consult your local
+repo). PR_URL can be any intermediate PR in a stack, and this will
+land up through that PR in the stack.
+
 **WARNING.**  You will NOT be able to merge these commits using the
-normal GitHub UI, as their branch bases won't be master.  For the
-PyTorch repository, we have a special mechanism for landing diffs;
-if you need a way to land these commits on a regular GitHub
-repository, give a holler on issues and we'll add this functionality.
+normal GitHub UI, as their branch bases won't be master.
 
 ## Structure of submitted pull requests
 
